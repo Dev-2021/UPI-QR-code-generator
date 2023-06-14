@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI QR code generator</title>
+    <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
+    <!-- <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.29.0/js/canvas-to-blob.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Create & Download UPI QR code</h1>
+        <div class="row">
+
+            <div class="col col-2">
+                <form action="#" class="input_form">
+                    <div class="error"></div>
+                    <label for="merchantName">Merchant Name</label>
+                    <input class="input-name" type="text" name="merchant_name" id="merchantName"
+                        placeholder="Merchant/Account Holder Name" required>
+                    <label for="VPA">UPI ID(VPA)</label>
+                    <input class="input-vpa" type="text" name="VPA" id="VPA" placeholder="you@bank" required="true">
+                    <label for=" amount">Amount</label>
+                    <input class="input-amount" type="number" name="amount" id="amount" placeholder="1000">
+                    <label for="note">Transaction Description/Note</label>
+                    <input class="input-note" type="text" name="note" id="note" placeholder="Transaction Note">
+                    <button class="btn-submit" type="submit">Generate QR code</button>
+                </form>
+            </div>
+            <div class="col col-2">
+                <div id="capture">
+                    <div class="card">
+                        <div class="merchantName-text">Merchant Name</div>
+                        <img class="qr-img" src="img/demo.png" alt="QR img">
+                        <div class="vpa-text">payee@bank</div>
+                        <div class="description">Scan & pay with any UPI supported app</div>
+                        <img class="bhim-upi-logo" style=" max-width: 300px;width: 100%; margin-top: 10px;"
+                            src="img/BHIM_UPI.svg" alt="BHIM UPI">
+                        <div class="app-imgs">
+                            <img src="img/Paytm.svg" alt="">
+                            <img src="img/Phone-Pe.svg" alt="">
+                            <img src="img/G-pay.svg" alt="">
+                            <img src="img/HDFC.svg" alt="">
+                            <img src="img/Kotak.svg" alt="">
+                            <img src="img/icici.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <button id="printBtn" class="download-button hidden">Download QR</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
