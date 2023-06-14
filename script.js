@@ -61,7 +61,6 @@ dom.btnSubmit.addEventListener("click", (e) => {
   values.amount = Number(dom.inputAmount.value);
   values.note = dom.inputNote.value;
   let QRImg = UPI(values);
-  console.log(QRImg);
   dom.qrImg.setAttribute("src", QRImg);
   // Add a click event listener to the download button
 
