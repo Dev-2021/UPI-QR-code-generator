@@ -16,6 +16,7 @@ const dom = {
 const values = {
   size: 220,
 };
+const scale = 2;
 
 function updateTextContent(input, textElement, defaultText) {
   input.addEventListener("keyup", function () {
@@ -77,6 +78,8 @@ function downloadDivAsImage() {
   // Use dom-to-image to render the div element as a data URL
   domtoimage
     .toPng(divToCapture, {
+      width: divToCapture.clientWidth * scale,
+      height: divToCapture.clientHeight * scale,
       bgcolor: "white", // Set the background color of the image
       quality: 1, // Set the image quality (0 to 1)
     })
