@@ -27,7 +27,7 @@ updateTextContent(dom.inputName, dom.merchantNameText, "Merchant Name");
 updateTextContent(dom.inputVPA, dom.vpaText, "payee@bank");
 
 const UPI = function (v) {
-  const googleQR = `https://chart.googleapis.com/chart?cht=qr&choe=UTF-8&chld=H`;
+  const googleQR = `https://quickchart.io/chart?cht=qr&choe=UTF-8&chld=H`;
   const UPIData = `upi://pay?pn=${v.merchantName}&pa=${v.vpa}&am=${
     v.amount ? v.amount : ""
   }&tn=${v.note}`;
