@@ -80,6 +80,10 @@ function downloadDivAsImage() {
     .toPng(divToCapture, {
       width: divToCapture.clientWidth * scale,
       height: divToCapture.clientHeight * scale,
+      style: {
+      transform: "scale(" + scale + ")",
+      transformOrigin: "top left"
+    },
       bgcolor: "white", // Set the background color of the image
       quality: 1, // Set the image quality (0 to 1)
     })
